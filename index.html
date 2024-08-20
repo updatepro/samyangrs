@@ -15,7 +15,7 @@
 <div id="wrapper">
     <div id="navbar">
         <div class="black">
-            <a href="index.html"><img src="img/logo.png" alt=""></a>
+            <a href="Main.html"><img src="img/logo.png" alt=""></a>
             <div id="navIcon">
                 <div class="line-top"></div>
                 <div class="line"></div>
@@ -78,9 +78,9 @@
                 </li>
             </ul>
             <ul id="submenu3" class="brands_nav hidden">
-                <li class="sub underline"><a href="">Core</a>
-                    <li><a href="">삼양라면</a></li>
-                    <li><a href="">삼양라운드힐</a></li>
+                <li class="sub underline"><a href="Second.html">Core</a>
+                    <li><a href="Second.html#syramyun">삼양라면</a></li>
+                    <li><a href="Second.html#roundhill">삼양라운드힐</a></li>
                 </li>
                 <li class="sub underline"><a href="">Leading</a>
                     <li><a href="">불닭볶음면</a></li>
@@ -203,16 +203,13 @@
     xBtn.click(function(){
         deskNav.slideUp('fast');
     })
-    // Handle menu hover to show submenus and images
+    
     $(".navList li").hover(function() {
-        // Hide all submenus
         $(".sub_nav ul").addClass("hidden");
 
-        // Show the corresponding submenu
         let submenuId = $(this).data("submenu");
         $("#" + submenuId).removeClass("hidden");
 
-        // Update the image
         let imageSrc = $(this).data("image");
         $("#menu-image").attr("src", imageSrc);
     })
